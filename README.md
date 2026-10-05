@@ -1,53 +1,82 @@
 # FastAPI Student Management System
 
-A backend Student Management System built using FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication, and Pydantic.
+A production-ready Student Management System built using FastAPI, SQLAlchemy, PostgreSQL, JWT Authentication, Role-Based Authorization, and automated testing.
 
-## Features
+## 🚀 Live Demo
 
-- User registration and login
-- JWT-based authentication
-- Access and refresh tokens
-- Role-based authorization
-- Admin and normal user roles
-- Student CRUD operations
-- Student ownership and permission checks
-- Pagination
-- Search students by name
-- Sorting students
-- Request validation using Pydantic
-- PostgreSQL database integration
-- Environment variable configuration
-- Automated API testing using pytest
-- Docker configuration prepared for future containerization
+Live API:
+https://fastapiproject-rwkk.onrender.com
 
-## Technologies Used
+Swagger API Documentation:
+https://fastapiproject-rwkk.onrender.com/docs
+
+## 🛠️ Technologies Used
 
 - Python
 - FastAPI
 - SQLAlchemy
 - PostgreSQL
 - Pydantic
-- JWT
+- JWT Authentication
 - bcrypt
+- OAuth2
 - pytest
-- Postman
 - Git & GitHub
-- Docker configuration
+- Render
 
-## Project Structure
+## ✨ Features
+
+### Authentication & Authorization
+
+- User registration
+- User login
+- Password hashing using bcrypt
+- JWT access tokens
+- JWT refresh tokens
+- Role-based authorization
+- Admin and normal user roles
+- Ownership-based authorization
+
+### Student Management
+
+- Create student
+- Get student by ID
+- Get students
+- Update student
+- Delete student
+- Search students
+- Sort students
+- Pagination
+- Response validation
+
+### Security
+
+- Protected API endpoints
+- Admin-only operations
+- User ownership checks
+- Password hashing
+- Environment variables for sensitive configuration
+
+### Testing
+
+- Automated API tests using pytest
+- 50 tests passing
+
+## 📁 Project Structure
 
 ```text
 FastAPIProject/
+│
+├── main.py
+├── database.py
+├── models.py
+├── schemas.py
+├── auth.py
 │
 ├── routers/
 │   ├── auth_router.py
 │   └── student.py
 │
-├── auth.py
-├── database.py
-├── main.py
-├── models.py
-├── schemas.py
 ├── test_main.py
 ├── requirements.txt
 ├── Dockerfile
